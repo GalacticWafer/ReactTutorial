@@ -7,19 +7,22 @@ const UseStateObject = () => {
     message: 'random message'
   });
 
-  // individual state handlers
   const [name, setName] = useState('peter');
   const [age, setAge] = useState(24);
   const [message, setMessage] = useState('random message');
-  setMessage('hello world');
-
 
 const changeMessage = () => {
-  // object state handler, using the spread operator to leave the other fields of person alone and only change the message
-  // setPerson({...person, message:  'hello world'});
+  /*
+   // Object state handler, using the spread operator to leave the other fields of person alone and only change the message
+  setPerson({...person, message:  'hello world'});
+   */
 
-  // use this version to use the individual state handlers
-  setMessage('hello world');
+  // Use this version to use the individual state handlers
+  if(message === 'hello world') {
+    setMessage('goodbye world');
+  } else {
+    setMessage('hello world');
+  }
 };
 
   return (<>

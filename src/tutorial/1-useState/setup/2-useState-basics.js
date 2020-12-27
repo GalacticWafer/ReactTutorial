@@ -12,8 +12,8 @@ const UseStateBasics = () => {
   // console.log(value, handlerFunction);
   const [text, setText] = useState("random title");
 
-  const handleClick= () => {
-    if(text === 'random title') {
+  const handleClick = () => {
+    if (text === 'random title') {
       setText('hello world');
     } else {
       setText('random title');
